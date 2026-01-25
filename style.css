@@ -1,0 +1,135 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Faz com que a página ocupe 100% da altura da tela */
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 40px 80px 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* TÍTULO */
+.logo {
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: 15px;
+    color: #0c0f0b;
+    line-height: 75px;
+}
+
+/* MENU */
+.menu {
+    margin-top: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 25px;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+}
+
+.menu a:hover {
+    opacity: 0.6;
+}
+
+.gallery {
+    column-count: 3;        /* número de colunas */
+    column-gap: 20px;       /* espaçamento entre colunas */
+    padding: 30px;
+}
+
+.img-box {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    display: block;
+}
+
+/* PÁGINA DE CONTATO CENTRALIZADA */
+.contact-container {
+    width: 100%;
+    height: calc(100vh - 150px); /* deixa espaço para a navbar */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* centraliza vertical */
+    align-items: center;       /* centraliza horizontal */
+    text-align: center;
+}
+
+
+.contact-container h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+footer {
+    margin-top: auto; /* Faz com que o footer vá para o final da página */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+    background-color: #f8f8f867;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 900px) {
+    .logo {
+        font-size: 45px;
+        letter-spacing: 10px;
+        line-height: 50px;
+    }
+
+    .navbar {
+        padding: 20px 40px;
+    }
+
+    .menu a {
+        margin-left: 15px;
+        font-size: 13px;
+    }
+
+    .img-box {
+        width: 100%;
+    }
+
+    .gallery {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        font-size: 32px;
+        letter-spacing: 5px;
+    }
+}
+
+@media (max-width: 900px) {
+    .gallery {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        column-count: 1;
+    }
+}
